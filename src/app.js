@@ -46,4 +46,14 @@ window.onload = function() {
   botonNext.addEventListener("click", function() {
     carta();
   });
+
+  let save = document.getElementById("save");
+
+  save.addEventListener("click", function() {
+    let carta = document.getElementById("carta");
+    let largo = document.getElementById("height").value;
+    let ancho = document.querySelector("#width").value;
+    carta.style.width = ancho + "px";
+    carta.style.height = largo + "px";
+  });
 };
