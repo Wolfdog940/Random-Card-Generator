@@ -24,13 +24,13 @@ window.onload = function() {
     else document.querySelector(".button").style.color = "black";
 
     if (palo == "♦" || palo == "♥")
-      document.querySelector(".number").style.color = "red";
-    else document.querySelector(".number").style.color = "black";
+      document.querySelector("#numer").style.color = "red";
+    else document.querySelector("#numer").style.color = "black";
 
     if (carta == "A") carta = palo;
 
     document.querySelector(".top").innerHTML = palo;
-    document.querySelector(".number").innerHTML = carta;
+    document.querySelector("#numer").innerHTML = carta;
     document.querySelector(".button").innerHTML = palo;
 
     return;
@@ -50,10 +50,28 @@ window.onload = function() {
   let save = document.getElementById("save");
 
   save.addEventListener("click", function() {
-    let carta = document.getElementById("carta");
+    let card = document.getElementById("carta");
     let largo = document.getElementById("height").value;
     let ancho = document.querySelector("#width").value;
-    carta.style.width = ancho + "px";
-    carta.style.height = largo + "px";
+    card.style.width = ancho + "px";
+    card.style.height = largo + "px";
+
+    if (ancho + "px" > "250px" && largo + "px" > "250px") {
+      card.querySelector(".top").style.fontSize = "1cm";
+      card.querySelector(".midle").style.fontSize = "5cm";
+      card.querySelector(".button").style.fontSize = "1cm";
+    } else if (ancho + "px" < "250px" || largo + "px" < "250px") {
+      card.querySelector(".top").style.fontSize = "10px";
+      card.querySelector(".midle").style.fontSize = "10px";
+      card.querySelector(".button").style.fontSize = "10px";
+    } else if (ancho + "px" < "50px" || largo + "px" < "50px") {
+      card.querySelector(".top").style.fontSize = "5px";
+      card.querySelector(".midle").style.fontSize = "5px";
+      card.querySelector(".button").style.fontSize = "5px";
+    } else if (ancho + "px" < "25px" || largo + "px" < "25px") {
+      card.querySelector(".top").style.fontSize = "4px";
+      card.querySelector(".midle").style.fontSize = "4px";
+      card.querySelector(".button").style.fontSize = "4px";
+    }
   });
 };

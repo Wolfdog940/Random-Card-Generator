@@ -4,9 +4,11 @@ body {
   background-image: url("https://www.dolorcronicoypsicologia.es/wp-content/webpc-passthru.php?src=https://www.dolorcronicoypsicologia.es/wp-content/uploads/2022/04/casino-online_1.jpg&nocache=1");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vp;
 }
-h1 {
-  font-size: 3cm;
+
+#numer {
+  font-size: 5cm;
   font-family: "Noticia Text";
 }
 .top {
